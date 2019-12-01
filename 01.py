@@ -1,32 +1,28 @@
 #!/usr/bin/env python
 
-import math
-
-with open(__file__, 'r') as f:
+with open(__file__, "r") as f:
     c = f.read()
-    lines = iter(c[c.rindex('🎅') + 1:c.rindex('🐍')].rstrip().split('\n'))
+    lines = iter(c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split("\n"))
 
 mass = list(map(int, lines))
 
-requirements = sum(map(lambda x: math.floor(x / 3) - 2, mass))
-print(requirements)
-assert requirements == 3368364
+
+def fuel(mass):
+    return mass // 3 - 2
 
 
-def calculate(fuel):
-    total = 0
+def fuels(mass):
+    while (mass := fuel(mass)) > 0:
+        yield mass
 
-    while True:
-        fuel = math.floor(fuel / 3) - 2
 
-        if fuel > 0:
-            total += fuel
-        else:
-            return total
+part_one = sum(fuel(m) for m in mass)
+print(part_one)
+assert part_one == 3368364
 
-total = sum(map(lambda x: calculate(x), mass))
-print(total)
-assert total == 5049684
+part_two = sum(f for m in mass for f in fuels(m))
+print(part_two)
+assert part_two == 5049684
 
 """🎅102562
 138390
