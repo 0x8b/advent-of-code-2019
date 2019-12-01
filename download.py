@@ -31,9 +31,9 @@ response = requests.get(aoc_url + "/input", cookies={"session": session})
 source = f"""\
 #!/usr/bin/env python
 \n\n
-with open(__file__, 'r') as f:
+with open(__file__, "r") as f:
     c = f.read()
-    lines = iter(c[c.rindex('🎅') + 1:c.rindex('🐍')].rstrip().split('\\n'))
+    lines = iter(c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split("\\n"))
 \n\n
 \"\"\"🎅{response.text}🐍\"\"\"
 """
