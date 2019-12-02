@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from aoc import take
-
 with open(__file__, "r") as f:
     c = f.read()
     line = c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split(",")
@@ -19,23 +17,23 @@ def set_input(memory, inp):
 
 
 def run(memory):
-    m = memory.copy()
-    p = 0
+    mem = memory.copy()
+    ptr = 0
 
     while True:
-        it = iter(m[p:])
-        opcode = next(it)
+        cmd = mem[ptr:]
+        opc = cmd[0]
 
-        if opcode == 99:
-            return m[0]
-        elif opcode == 1:
-            a, b, c = take(it, 3)
-            m[c] = m[a] + m[b]
-            p += 4
-        elif opcode == 2:
-            a, b, c = take(it, 3)
-            m[c] = m[a] * m[b]
-            p += 4
+        if opc == 1:
+            a, b, c = cmd[1:4]
+            mem[c] = mem[a] + mem[b]
+            ptr += 4
+        elif opc == 2:
+            a, b, c = cmd[1:4]
+            mem[c] = mem[a] * mem[b]
+            ptr += 4
+        elif opc == 99:
+            return mem[0]
         else:
             raise Exception("run: unknown opcode")
 
@@ -44,7 +42,7 @@ part_one = run(set_input(dump, {1: 12, 2: 2}))
 print(part_one)
 assert part_one == 4090701
 
-for noun, verb in ((a, b) for a in range(1, 100) for b in range(1, 100)):
+for noun, verb in ((a, b) for a in range(100) for b in range(100)):
     ret = run(set_input(dump, {1: noun, 2: verb}))
 
     if ret == 19690720:

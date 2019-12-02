@@ -3,7 +3,7 @@
 |Day|Name|Solution|
 |---|---|---|
 |[01](https://adventofcode.com/2019/day/1)|The Tyranny of the Rocket Equation|[py](/01.py)|
-|[02](https://adventofcode.com/2019/day/2)|-|-|
+|[02](https://adventofcode.com/2019/day/2)|1202 Program Alarm|[py](/02.py)|
 |[03](https://adventofcode.com/2019/day/3)|-|-|
 |[04](https://adventofcode.com/2019/day/4)|-|-|
 |[05](https://adventofcode.com/2019/day/5)|-|-|
