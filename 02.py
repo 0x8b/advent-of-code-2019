@@ -4,11 +4,11 @@ with open(__file__, "r") as f:
     c = f.read()
     line = c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split(",")
 
-dump = list(map(int, line))
+initial_memory = list(map(int, line))
 
 
 def set_input(memory, inp):
-    mem = memory.copy()
+    mem = memory[:]
 
     for pos, val in inp.items():
         mem[pos] = val
@@ -17,7 +17,7 @@ def set_input(memory, inp):
 
 
 def run(memory):
-    mem = memory.copy()
+    mem = memory[:]
     ptr = 0
 
     while True:
@@ -38,12 +38,12 @@ def run(memory):
             raise Exception("run: unknown opcode")
 
 
-part_one = run(set_input(dump, {1: 12, 2: 2}))
+part_one = run(set_input(initial_memory, {1: 12, 2: 2}))
 print(part_one)
 assert part_one == 4090701
 
 for noun, verb in ((a, b) for a in range(100) for b in range(100)):
-    ret = run(set_input(dump, {1: noun, 2: verb}))
+    ret = run(set_input(initial_memory, {1: noun, 2: verb}))
 
     if ret == 19690720:
         part_two = 100 * noun + verb
