@@ -20,7 +20,7 @@ def run(memory):
     mem = memory[:]
     ptr = 0
 
-    while True:
+    while mem[ptr] != 99:
         cmd = mem[ptr:]
         opc = cmd[0]
 
@@ -32,10 +32,10 @@ def run(memory):
             a, b, c = cmd[1:4]
             mem[c] = mem[a] * mem[b]
             ptr += 4
-        elif opc == 99:
-            return mem[0]
         else:
             raise Exception("run: unknown opcode")
+    
+    return mem[0]
 
 
 part_one = run(set_input(initial_memory, {1: 12, 2: 2}))
@@ -43,9 +43,7 @@ print(part_one)
 assert part_one == 4090701
 
 for noun, verb in ((a, b) for a in range(100) for b in range(100)):
-    ret = run(set_input(initial_memory, {1: noun, 2: verb}))
-
-    if ret == 19690720:
+    if 19690720 == run(set_input(initial_memory, {1: noun, 2: verb})):
         part_two = 100 * noun + verb
         print(part_two)
         assert part_two == 6421
