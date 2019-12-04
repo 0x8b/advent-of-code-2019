@@ -11,10 +11,7 @@ part_one = 0
 part_two = 0
 
 for i in range(lower, upper + 1):
-    s = str(i)
-    is_sorted = s == "".join(sorted(s))
-
-    if is_sorted:
+    if (s := str(i)) == "".join(sorted(s)):
         if re.compile(r"(\d)\1").search(s):
             part_one += 1
 
