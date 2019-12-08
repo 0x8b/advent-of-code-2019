@@ -1,31 +1,20 @@
 #!/usr/bin/env python
 
-
-def chunks(c, n):
-    c = list(c)
-
-    for i in range(0, len(c), n):
-        yield c[i : i + n]
-
+from aoc import chunks
 
 with open(__file__, "r") as f:
     c = f.read()
     data = c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip()
 
 w, h = 25, 6
-fewest_zeros = min((layer for layer in chunks(data, w * h)), key=lambda lay: lay.count("0"))
+lines = ["".join(layer) for layer in chunks(data, w * h)]
 
-part_one = fewest_zeros.count("1") * fewest_zeros.count("2")
+fz = min(lines, key=lambda x: x.count("0"))
+part_one = fz.count("1") * fz.count("2")
 print(part_one)
 assert part_one == 2904
 
-visible = list(
-    "".join(stack).lstrip("2")[0]
-    for stack in zip(*(layer for layer in chunks(data, w * h)))
-)
-
-visible = map(lambda x: "░" if x == "1" else " ", visible)
-
+visible = list("░" if "".join(stack).lstrip("2")[0] == "1" else " " for stack in zip(*lines))
 part_two = "\n".join("".join(line) for line in chunks(visible, w))
 print(part_two)
 

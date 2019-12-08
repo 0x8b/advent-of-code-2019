@@ -8,8 +8,8 @@
 |[04](https://adventofcode.com/2019/day/4)|Secure Container|[py](/04.py)|
 |[05](https://adventofcode.com/2019/day/5)|Sunny with a Chance of Asteroids|[py](/05.py)|
 |[06](https://adventofcode.com/2019/day/6)|Universal Orbit Map|[py](/06.py)|
-|[07](https://adventofcode.com/2019/day/7)|-|-|
-|[08](https://adventofcode.com/2019/day/8)|-|-|
+|[07](https://adventofcode.com/2019/day/7)|Amplification Circuit|[py](/07.py)|
+|[08](https://adventofcode.com/2019/day/8)|Space Image Format|[py](/08.py)|
 |[09](https://adventofcode.com/2019/day/9)|-|-|
 |[10](https://adventofcode.com/2019/day/10)|-|-|
 |[11](https://adventofcode.com/2019/day/11)|-|-|
