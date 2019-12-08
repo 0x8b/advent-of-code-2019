@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
+import intcode
 from operator import setitem
 
 with open(__file__, "r") as f:
     c = f.read()
-    line = c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split(",")
+    initial = list(map(int, c[c.rindex("🎅") + 1 : c.rindex("🐍")].rstrip().split(",")))
 
 
 def run(inp):
@@ -45,11 +46,11 @@ def run(inp):
             raise Exception(f"run: unknown opcode {opcode}")
 
 
-part_one = run(1)
+part_one = intcode.run(initial, 1)["output"]
 print(part_one)
 assert part_one == 7286649
 
-part_two = run(5)
+part_two = intcode.run(initial, 5)["output"]
 print(part_two)
 assert part_two == 15724522
 
