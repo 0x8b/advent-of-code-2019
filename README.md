@@ -10,8 +10,8 @@
 |[06](https://adventofcode.com/2019/day/6)|Universal Orbit Map|[py](/06.py)|
 |[07](https://adventofcode.com/2019/day/7)|Amplification Circuit|[py](/07.py)|
 |[08](https://adventofcode.com/2019/day/8)|Space Image Format|[py](/08.py)|
-|[09](https://adventofcode.com/2019/day/9)|-|-|
-|[10](https://adventofcode.com/2019/day/10)|-|-|
+|[09](https://adventofcode.com/2019/day/9)|Sensor Boost|-|
+|[10](https://adventofcode.com/2019/day/10)|Monitoring Station|[py](/10.py)|
 |[11](https://adventofcode.com/2019/day/11)|-|-|
 |[12](https://adventofcode.com/2019/day/12)|-|-|
 |[13](https://adventofcode.com/2019/day/13)|-|-|

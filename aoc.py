@@ -16,7 +16,6 @@ def take(iterable, n):
     return tuple(itertools.islice(iterable, 0, n))
 
 
-
 def chunks(c, n):
     c = list(c)
     for i in range(0, len(c), n):
