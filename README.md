@@ -1,5 +1,7 @@
 # 0x8b's [Advent of Code 2019](https://adventofcode.com/2019) solutions
 
+[![Run on Repl.it](https://repl.it/badge/github/0x8b/advent-of-code-2019)](https://repl.it/github/0x8b/advent-of-code-2019)
+
 |Day|Name|Solution|
 |---|---|---|
 |[01](https://adventofcode.com/2019/day/1)|The Tyranny of the Rocket Equation|[py](/01.py)|
