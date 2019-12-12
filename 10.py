@@ -67,7 +67,6 @@ def clockwise(vector):
 
 
 grid = map(lambda p: (p[0] - sx, -(p[1] - sy)), product(range(side), repeat=2))
-
 sorted_positions = sorted(grid, key=clockwise)[1:]
 
 

@@ -12,8 +12,8 @@
 |[08](https://adventofcode.com/2019/day/8)|Space Image Format|[py](/08.py)|
 |[09](https://adventofcode.com/2019/day/9)|Sensor Boost|-|
 |[10](https://adventofcode.com/2019/day/10)|Monitoring Station|[py](/10.py)|
-|[11](https://adventofcode.com/2019/day/11)|-|-|
-|[12](https://adventofcode.com/2019/day/12)|-|-|
+|[11](https://adventofcode.com/2019/day/11)|Space Police|-|
+|[12](https://adventofcode.com/2019/day/12)|The N-Body Problem|[py](/12.py)|
 |[13](https://adventofcode.com/2019/day/13)|-|-|
 |[14](https://adventofcode.com/2019/day/14)|-|-|
 |[15](https://adventofcode.com/2019/day/15)|-|-|
